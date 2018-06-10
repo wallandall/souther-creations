@@ -1,0 +1,63 @@
+@import "bootstrap";
+@import "font-awesome";
+@import "products";
+@import "categories";
+$font1: 'Great Vibes', cursive;
+$font2: 'Pacifico', cursive;
+$color1: #0375b4;
+$color2: #5badde;
+$color3: #d0a331;
+$color4: #a6b0bf;
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  margin-bottom: 60px;
+  color: $color4;
+}
+
+h1{
+  font-family: $font2;
+  color: $color1;
+}
+
+h2{
+  color: $color2;
+}
+
+.padding-top-70{
+  padding-top: 70px;
+}
+
+.home-image{
+  height: 140px;
+  width: 140px;
+}
+
+.bg-color1{
+  background-color: $color3;
+}
+
+.wrapper{
+  min-height: 100%;
+}
+
+.inner{
+  padding: 20px;
+  overflow:auto;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
