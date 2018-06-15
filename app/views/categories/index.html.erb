@@ -11,9 +11,9 @@
       </tr>
     </thead>
 
-    <tbody>
+    <tbody class="sortable">
       <% @categories.each do |category| %>
-        <tr>
+        <tr id="<%= category.id %>">
           <td><%= category.product_category %></td>
           <td><%= link_to 'Show', category %></td>
           <td><%= link_to 'Edit', edit_category_path(category) %></td>

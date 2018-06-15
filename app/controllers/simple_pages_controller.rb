@@ -1,6 +1,7 @@
 class SimplePagesController < ApplicationController
   def index
-    @categories = Category.all
+    @categories = Category.order(:sort).all
+    @featured_product = Product.first
   end
 
   def about

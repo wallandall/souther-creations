@@ -1,9 +1,11 @@
 <div class="container">
   <h1>Welcome to Southern Creations</h1>
   <h2>Hand Crafted Creations</h2>
-
-  <div class="row">
+  <h2>Featured Product:</h2>
+  <%= @featured_product.name %>
+  <div class="row sortable">
     <% @categories.each do |category| %>
       <%= render category %>
     <% end %>
   </div>
+</div>
