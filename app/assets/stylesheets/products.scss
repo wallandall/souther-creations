@@ -3,13 +3,37 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .product-image{
   margin: 10px;
+
 }
 
 .new-product-btn{
   margin-top: 25px;
   margin-bottom: 25px;
 }
+.product-buttons{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 
 .card{
   margin-top: 15px;
+}
+
+.card-img-top{
+  height: 200px;
+}
+
+.card-body{
+  height: 200px;
+}
+
+.description-truncate{
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scroll-image{
+  height: 600px;
 }

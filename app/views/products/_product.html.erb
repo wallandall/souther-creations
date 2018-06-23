@@ -1,10 +1,10 @@
 <div class="col-md-4">
   <div class="card md-4 box-shadow">
-    <%= image_tag(product.image_url, class: "image-fluid") %>
+    <%= image_tag(product.image_url, class: "card-img-top") %>
     <div class="card-body">
       <p class="card-text">Name: <%= link_to product.name, product %>  </p>
-      <p class="card-text">Category: <td><%= product.category.product_category %></td> </p>
-      <p class="card-text">Descripton: <td><%= product.description %></td></p>
+      <p class="card-text">Category: <td><%= product.category.product_category%></td> </p>
+      <p class="card-text description-truncate">Descripton: <td><%= product.description %></td></p>
       <p class="card-text">Price: <td><%= number_to_currency(product.price, :unit => "€") %></td></p>
     </div>
     <div class="card-footer">

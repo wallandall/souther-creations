@@ -10,7 +10,7 @@
   <div class="carousel-inner">
     <% @products.each do |product| %>
       <div class="carousel-item <%= " active" if product == @products.first %>">
-        <%= image_tag(product.image_url, class: "d-block w-100") %>
+        <%= image_tag(product.image_url, class: "d-block w-100 scroll-image") %>
         <div class="carousel-caption d-none d-md-block">
           <h5><%= product.name %></h5>
           <p><%= product.description%></p>
