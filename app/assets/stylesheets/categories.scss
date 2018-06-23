@@ -9,5 +9,10 @@
 
 .category{
   margin-bottom: .75rem;
-  height: 200px;
+  height: 400px;
+}
+
+.category-truncate{
+  height: 100px;
+  text-overflow: ellipsis;
 }
