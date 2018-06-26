@@ -1,6 +1,6 @@
 <div class="col-lg-3">
   <div class="category" id="<%= category.id %>">
-    <%= image_tag category.image_url, class: "rounded-circle home-image" %>
+    <%= image_tag category.image_url, class: "rounded-circle home-image", alt: category.product_category  %>
     <h2><%= category.product_category %></h2>
     <p class="category-truncate"><%= category.description %></p>
     <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
