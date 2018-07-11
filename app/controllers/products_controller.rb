@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+    @ip = request.remote_ip
   end
 
   # GET /products/1
