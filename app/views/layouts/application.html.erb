@@ -14,8 +14,9 @@
   <body>
     <%= render "layouts/nav" %>
     <div class="padding-top-70">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <div class="container">
+        <%= flash_messages %>
+      </div>
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>
