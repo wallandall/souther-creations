@@ -19,25 +19,31 @@
         <%#= link_to "Products", products_path, class: "nav-link" %>
         <%= link_to "Products", products_path, class: "nav-link"  %>
       </li>
+      <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i>
+            <%= current_user.first_name+ " " +current_user.last_name %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'Edit Name', edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to 'Edit Password', edit_user_registration_path, class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+
+            </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+        </li>
+      <% end %>
     </ul>
 
     <%= form_with(url: products_path, method: 'get', local: true, class: "form-inline my-2 my-lg-0") do |form| %>
       <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control mr-sm-2", placeholder: "Search for" %>
       <%= form.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0" %>
     <% end %>
-
-    <ul class="nav navbar-right navbar-nav margin-left-20">
-      <% if user_signed_in? %>
-      <li class="nav-item">
-        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: " btn btn-warning") %>
-      </li>
-      <% else %>
-      <li class="nav-item">
-        <%= link_to('Login', new_user_session_path, class: "btn btn-info") %>
-      </li>
-      <% end %>
-      </li>
-    </ul>
 
   </div>
 
