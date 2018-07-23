@@ -1,15 +1,11 @@
-/*
-*= require_tree .
-*= require_self
-*= require jquery.raty
-*/
+
 @import "bootstrap";
 @import "jquery-ui";
 @import "font-awesome";
 @import "products";
 @import "categories";
 @import "comments";
-
+@import "jquery.raty";
 $font1: 'Great Vibes', cursive;
 $font2: 'Pacifico', cursive;
 $color1: #0375b4;
