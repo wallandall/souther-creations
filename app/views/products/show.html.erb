@@ -6,24 +6,25 @@
       </div>
     </div>
     <div class="col-md-4">
-      <p>
-        <strong>Category:</strong>
-        <%= @product.category.product_category %>
-      </p>
-      <p>
-        <strong>Name:</strong>
-        <%= @product.name %>
-      </p>
+      <h2>Category: <%= @product.category.product_category %></h2>
+      <div>
+        <strong>Name: </strong> <%= @product.name %>
+      </div>
+      <div>
+        <strong>Description: </strong><%= @product.description %>
+      </div>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @product.description %>
-      </p>
+      <div class="margin-top-10">
+        <strong>Average Rating: </strong>
+        <div class="rated" data-score="<%= @product.average_rating %>"></div>
+      </div>
 
-      <p>
-        <strong>Rating</strong>
-      </p>
-
+      <div>
+        <%= render "new_comment" %>
+      </div>
+      <div>
+        <%= render 'comments' %>
+      </div>
     </div>
   </div>
 

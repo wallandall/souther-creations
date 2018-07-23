@@ -1,8 +1,15 @@
+/*
+*= require_tree .
+*= require_self
+*= require jquery.raty
+*/
 @import "bootstrap";
 @import "jquery-ui";
 @import "font-awesome";
 @import "products";
 @import "categories";
+@import "comments";
+
 $font1: 'Great Vibes', cursive;
 $font2: 'Pacifico', cursive;
 $color1: #0375b4;
@@ -44,7 +51,9 @@ h2{
 .margin-left-20{
   margin-left: 20px;
 }
-
+.margin-top-10{
+  margin-top: 10px;
+}
 .home-image{
   height: 140px;
   width: 140px;
