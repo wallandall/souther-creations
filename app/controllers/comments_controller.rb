@@ -14,8 +14,16 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destoy
+  def destroy
+    @comment = Comment.find(params[:id])
+    product = @comment.product
+    @comment.destroy
+    respond_to do |format|
+      format.html{ redirect_to product, alert: 'Comment was deleted!'}
+      format.json { head :no_content }
+    end
   end
+
 
   private
   def comment_params
