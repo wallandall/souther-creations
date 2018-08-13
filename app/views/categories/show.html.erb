@@ -4,7 +4,8 @@
     <strong>Product category:</strong>
     <%= @category.product_category %>
   </p>
-
-  <%= link_to 'Edit', edit_category_path(@category), class: "btn btn-primary"  %>
+  <% if current_user && current_user.admin %>
+    <%= link_to 'Edit', edit_category_path(@category), class: "btn btn-primary"  %>
+  <% end %>
   <%= link_to 'Back', categories_path, class: "btn btn-success"  %>
 </div>

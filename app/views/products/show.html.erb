@@ -28,7 +28,9 @@
     </div>
   </div>
   <div class="product-buttons">
-    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-primary"  %>
+    <% if current_user && current_user.admin %>
+      <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-primary"  %>
+    <% end %>
     <%= link_to 'Back', products_path, class: "btn btn-success"  %>
   </div>
 </div>

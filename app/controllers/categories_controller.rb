@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+  before_action only: [:new, :edit, :update, :destroy] do
+    redirect_to categories_path, notice: 'You need to be an Admin to perform this action!' unless current_user && current_user.admin
+  end
 
   # GET /categories
   # GET /categories.json
