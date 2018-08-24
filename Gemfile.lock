@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 6b303de08d2c8022c8ae93a28a09898cb12fd307
+  branch: master
+  specs:
+    faker (1.9.1)
+      i18n (>= 0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -74,6 +82,11 @@ GEM
     diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
+    factory_bot (4.11.0)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.11.0)
+      factory_bot (~> 4.11.0)
+      railties (>= 3.0.0)
     ffi (1.9.25)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
@@ -228,6 +241,8 @@ DEPENDENCIES
   cancancan (~> 2.2)
   coffee-rails (~> 4.2)
   devise
+  factory_bot_rails
+  faker!
   font-awesome-rails (~> 4.7, >= 4.7.0.4)
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)
