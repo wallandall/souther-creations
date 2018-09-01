@@ -11,6 +11,9 @@
         <strong>Name: </strong> <%= @product.name %>
       </div>
       <div>
+        <strong>Price: </strong> <%= number_to_currency(@product.price, :unit => "€") %>
+      </div>
+      <div>
         <strong>Description: </strong><%= @product.description %>
       </div>
 
@@ -18,7 +21,11 @@
         <strong>Average Rating: </strong>
         <div class="rated" data-score="<%= @product.average_rating %>"></div>
       </div>
-
+      <div class="">
+        <%= form_with(url: '/payments/create') do |form| %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </div>
       <div>
         <%= render "new_comment" %>
       </div>

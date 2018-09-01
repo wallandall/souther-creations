@@ -6,6 +6,7 @@
       <p class="card-text">Category: <td><%= product.category.product_category%></td> </p>
       <p class="card-text description-truncate">Descripton: <td><%= product.description %></td></p>
       <p class="card-text">Price: <td><%= number_to_currency(product.price, :unit => "€") %></td></p>
+
     </div>
     <% if current_user && current_user.admin %>
       <div class="card-footer">

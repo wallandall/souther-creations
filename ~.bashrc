@@ -1,0 +1,1 @@
+export STRIPE_TEST_KEY="sk_test_Z1Ed93s36aHaXtes801xq3e6"
