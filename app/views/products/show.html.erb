@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-sm-6 ">
       <div class="product-image">
         <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, class: "image-fluid img-thumbnail img-zoom", width: "350") %>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-6">
       <h2>Category: <%= @product.category.product_category %></h2>
       <div>
         <strong>Name: </strong> <%= @product.name %>
@@ -19,7 +19,7 @@
 
       <div class="margin-top-10">
         <strong>Average Rating: </strong>
-        <div class="rated" data-score="<%= @product.average_rating %>"></div>
+        <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
       </div>
       <div class="">
         <%= form_with(url: '/payments/create') do |form| %>
