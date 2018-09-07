@@ -2,9 +2,9 @@
 
   <h1>Products</h1>
   <div class="row">
-    <% @products.each do |product| %>
-     <%= render product %>
-    <% end %>
+    <% cache(cache_key_for_products) do %>
+       <%= render @products %>
+     <% end %>
   </div>
   <% if current_user && current_user.admin %>
     <%= link_to '', new_product_path, class: "new-product-btn fa fa-plus-circle fa-2x btn btn-primary" %>

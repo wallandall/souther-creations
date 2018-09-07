@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+  <% cache @product do %>
     <div class="col-sm-6 ">
       <div class="product-image">
         <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, class: "image-fluid img-thumbnail img-zoom", width: "350") %>
@@ -16,7 +17,7 @@
       <div>
         <strong>Description: </strong><%= @product.description %>
       </div>
-
+    <% end %>
       <div class="margin-top-10">
         <strong>Average Rating: </strong>
         <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>

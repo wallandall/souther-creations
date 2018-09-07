@@ -1,19 +1,21 @@
-<div class="col-md-4">
-  <div class="card md-4 box-shadow">
-    <%# logger.debug "Product: #{product.name}" %>
-    <%= image_tag(product.image_url, class: "card-img-top") %>
-    <div class="card-body">
-      <p class="card-text">Name: <%= link_to product.name, product %>  </p>
-      <p class="card-text">Category: <td><%= product.category.product_category%></td> </p>
-      <p class="card-text description-truncate">Descripton: <td><%= product.description %></td></p>
-      <p class="card-text">Price: <td><%= number_to_currency(product.price, :unit => "€") %></td></p>
+<% cache @products do %>
+  <div class="col-md-4">
+    <div class="card md-4 box-shadow">
+      <%# logger.debug "Product: #{product.name}" %>
+      <%= image_tag(product.image_url, class: "card-img-top") %>
+      <div class="card-body">
+        <p class="card-text">Name: <%= link_to product.name, product %>  </p>
+        <p class="card-text">Category: <td><%= product.category.product_category%></td> </p>
+        <p class="card-text description-truncate">Descripton: <td><%= product.description %></td></p>
+        <p class="card-text">Price: <td><%= number_to_currency(product.price, :unit => "€") %></td></p>
 
-    </div>
-    <% if current_user && current_user.admin %>
-      <div class="card-footer">
-        <%= link_to 'Edit', edit_product_path(product) %> |
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
-    <% end %>
+      <% if current_user && current_user.admin %>
+        <div class="card-footer">
+          <%= link_to 'Edit', edit_product_path(product) %> |
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>
