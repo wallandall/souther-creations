@@ -1,13 +1,14 @@
 <div class="container">
-
   <h1>Products</h1>
   <div class="row">
     <% cache(cache_key_for_products) do %>
-       <%= render @products %>
+       <%#= render @products %>
+       <% @products.each do |product| %>
+          <%= render partial: 'product', locals: {product: product} %>
+        <% end %>
      <% end %>
   </div>
   <% if current_user && current_user.admin %>
     <%= link_to '', new_product_path, class: "new-product-btn fa fa-plus-circle fa-2x btn btn-primary" %>
   <% end %>
-
 </div>
