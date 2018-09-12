@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row" accesskey="data-product-id="<%= @product.id %>" >
   <% cache @product do %>
     <div class="col-sm-6 ">
       <div class="product-image">
@@ -28,8 +28,9 @@
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
       </div>
-      <div class="badge badge-warning" style="display:none" role="alert">
+      <div class="alert alert-info" style="display:none" role="alert">
         A new comment was posted!
+        <button class="close fa fa-times-circle fa-2x" data-dismiss="alert"></button>
       </div>
       <div>
         <%= render "new_comment" %>
