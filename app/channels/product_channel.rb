@@ -1,6 +1,10 @@
 class ProductChannel < ApplicationCable::Channel
   def subscribed
+<<<<<<< HEAD
      #stream_from "product_channel"
+=======
+    # stream_from "product_channel"
+>>>>>>> Test
   end
 
   def unsubscribed
