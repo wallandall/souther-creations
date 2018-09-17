@@ -1,12 +1,12 @@
 <div class="container">
   <h1>Products</h1>
   <div class="row">
-    <%# cache(cache_key_for_products) do %>
+    <% cache(cache_key_for_products) do %>
        <%#= render @products %>
        <% @products.each do |product| %>
           <%= render partial: 'product', locals: {product: product} %>
         <% end %>
-     <% #end %>
+     <% end %>
   </div>
 
   <% if current_user && current_user.admin %>
